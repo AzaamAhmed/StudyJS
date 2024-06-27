@@ -1,0 +1,92 @@
+<input id="num1">
+<input id="num2">
+
+<button onclick="Addfunction()">Add</button>
+<button onclick="Subfunction()">Sub</button>
+<button onclick="Mulfunction()">Mul</button>
+<button onclick="Divfunction()">Div</button>
+
+<button onclick="calculate('+')">+</button>
+<button onclick="calculate('-')">-</button>
+<button onclick="calculate('*')">*</button>
+<button onclick="calculate('/')">/</button>
+
+<p id="results">Results</p>
+<script>
+    /*
+    var box1=document.getElementById("num1")
+    var box2=document.getElementById("num2")
+
+    var results = document.getElementById("results")
+
+    function Addfunction()
+    {
+        var box1value = Number(box1.value)
+        var box2value = Number(box2.value)
+
+        var total = box1value + box2value
+
+        results.textContent = total
+    }
+    
+    function Subfunction()
+    {
+        var box1value = Number(box1.value)
+        var box2value = Number(box2.value)
+
+        var total = box1value - box2value
+
+        results.textContent = total
+    }
+
+    function Mulfunction()
+    {
+        var box1value = Number(box1.value)
+        var box2value = Number(box2.value)
+
+        var total = box1value * box2value
+
+        results.textContent = total
+    }
+
+    function Divfunction()
+    {
+        var box1value = Number(box1.value)
+        var box2value = Number(box2.value)
+
+        var total = box1value / box2value
+
+        results.textContent = total
+    }
+
+    */
+    function calculate(operation) {
+        var num1 = parseFloat(document.getElementById("num1").value);
+        var num2 = parseFloat(document.getElementById("num2").value);
+        var results = document.getElementById("results");
+
+        switch (operation) {
+            case '+':
+                results.textContent = "Result: " + (num1 + num2);
+                break;
+            case '-':
+                results.textContent = "Result: " + (num1 - num2);
+                break;
+            case '*':
+                results.textContent = "Result: " + (num1 * num2);
+                break;
+            case '/':
+                if (num2 !== 0) {
+                    results.textContent = "Result: " + (num1 / num2);
+                } else {
+                    results.textContent = "Cannot divide by zero";
+                }
+                break;
+            default:
+                results.textContent = "Invalid operation";
+        }
+    }
+    
+
+   
+</script>
